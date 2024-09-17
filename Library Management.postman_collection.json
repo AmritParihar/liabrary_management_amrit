@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "5d1db0c1-9277-4ca7-912f-4cccc71d2361",
+		"name": "Library Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26804498"
+	},
+	"item": [
+		{
+			"name": "/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"username\":\"Amri\",\r\n      \"password\":\"Suthar50@\",\r\n       \"role\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/register"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Amritsuthar\",\r\n    \"password\":\"Suthar50@\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/login"
+			},
+			"response": []
+		},
+		{
+			"name": "/books",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzI2NTg5MDE3fQ.6XtftnPuF570V_Q-gDD0v1TvdCTK-YiIxAEUJ4C86Wg"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"mybook\",\r\n    \"author\":\"Vivne\",\r\n    \"status\":\"available\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/books"
+			},
+			"response": []
+		},
+		{
+			"name": "getBook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzI2NTg5MDE3fQ.6XtftnPuF570V_Q-gDD0v1TvdCTK-YiIxAEUJ4C86Wg"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/getbooks"
+			},
+			"response": []
+		},
+		{
+			"name": "updateBook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzI2NTg5MDE3fQ.6XtftnPuF570V_Q-gDD0v1TvdCTK-YiIxAEUJ4C86Wg"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Lhub\",\r\n    \"author\":\"mangnaji\",\r\n    \"status\":\"available\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/books/1"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzI2NTg5MDE3fQ.6XtftnPuF570V_Q-gDD0v1TvdCTK-YiIxAEUJ4C86Wg"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/books/4"
+			},
+			"response": []
+		},
+		{
+			"name": "getstudent",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzI2NTg5MDE3fQ.6XtftnPuF570V_Q-gDD0v1TvdCTK-YiIxAEUJ4C86Wg"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/students"
+			},
+			"response": []
+		},
+		{
+			"name": "create student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzI2NTg5MDE3fQ.6XtftnPuF570V_Q-gDD0v1TvdCTK-YiIxAEUJ4C86Wg"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"viven\",\r\n    \"email\":\"viven@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/students"
+			},
+			"response": []
+		},
+		{
+			"name": "update student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzI2NTg5MDE3fQ.6XtftnPuF570V_Q-gDD0v1TvdCTK-YiIxAEUJ4C86Wg"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"vivenUpdate\",\r\n    \"email\": \"vivenUpdate@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/students/1"
+			},
+			"response": []
+		},
+		{
+			"name": "/assignments",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzI2NTg5MDE3fQ.6XtftnPuF570V_Q-gDD0v1TvdCTK-YiIxAEUJ4C86Wg"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentId\":5,\r\n    \"bookId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/assignments"
+			},
+			"response": []
+		},
+		{
+			"name": "delete student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzI2NTg5MDE3fQ.6XtftnPuF570V_Q-gDD0v1TvdCTK-YiIxAEUJ4C86Wg"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/students/1"
+			},
+			"response": []
+		},
+		{
+			"name": "returnBook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzI2NTg5MDE3fQ.6XtftnPuF570V_Q-gDD0v1TvdCTK-YiIxAEUJ4C86Wg"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"url": "http://localhost:3000/assignments/2/return"
+			},
+			"response": []
+		},
+		{
+			"name": "Bookhistory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzI2NTg5MDE3fQ.6XtftnPuF570V_Q-gDD0v1TvdCTK-YiIxAEUJ4C86Wg"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/books/2/history"
+			},
+			"response": []
+		}
+	]
+}
